@@ -1,56 +1,29 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Comprar Pinturas</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="estilos.css">
-  <style>
-    .card { background-color: #2b2d38; border-radius: 12px; color:#fff; }
-    .btn-buy { background: linear-gradient(45deg,#ffde91,#ffbb33); color:#1e1f25; font-weight:bold; }
-    .btn-buy:hover { background: linear-gradient(45deg,#ffbb33,#ffaa00); }
-  </style>
-</head>
-<body>
-  <div class="container py-5 text-center">
-    <h1 class="text-warning">🛒 Tienda de Pinturas</h1>
-    <p>Selecciona los materiales que quieras adquirir.</p>
+<header class="banner" style="background-image: url('./img/comprar-banner.jpg')">
+  <h1>Comprar Arte</h1>
+  <p>Selecciona tus productos y simula tu compra.</p>
+</header>
 
-    <div class="row g-4 mt-4">
-      <div class="col-md-4">
-        <div class="card p-3">
-          <img src="./img/temperas.jpeg" class="card-img-top rounded" alt="Temperas">
-          <div class="card-body">
-            <h5 class="card-title">Temperas</h5>
-            <p class="card-text">Set de colores brillantes - 10€</p>
-            <button class="btn btn-buy w-100">Añadir al carrito</button>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="card p-3">
-          <img src="./img/ceras.webp" class="card-img-top rounded" alt="Ceras">
-          <div class="card-body">
-            <h5 class="card-title">Ceras</h5>
-            <p class="card-text">Pack de 24 colores - 8€</p>
-            <button class="btn btn-buy w-100">Añadir al carrito</button>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="card p-3">
-          <img src="./img/rotulador.jpeg" class="card-img-top rounded" alt="Rotuladores">
-          <div class="card-body">
-            <h5 class="card-title">Rotuladores</h5>
-            <p class="card-text">Punta fina - 12€</p>
-            <button class="btn btn-buy w-100">Añadir al carrito</button>
-          </div>
+<div class="container my-5">
+  <div class="row g-4">
+    <div class="col-md-4">
+      <div class="card">
+        <img src="./img/temperas1.jpeg" class="card-img-top" alt="Temperas">
+        <div class="card-body">
+          <h5 class="card-title">Set 12 Temperas</h5>
+          <p class="card-text">Precio: $12</p>
+          <a href="#" class="btn btn-buy w-100">Añadir al carrito</a>
         </div>
       </div>
     </div>
-
-    <a href="index.html" class="btn btn-secondary mt-5">⬅ Volver a la galería</a>
+    <div class="col-md-4">
+      <div class="card">
+        <img src="./img/ceras1.webp" class="card-img-top" alt="Ceras">
+        <div class="card-body">
+          <h5 class="card-title">Set 12 Ceras</h5>
+          <p class="card-text">Precio: $8</p>
+          <a href="#" class="btn btn-buy w-100">Añadir al carrito</a>
+        </div>
+      </div>
+    </div>
   </div>
-</body>
-</html>
+</div>
