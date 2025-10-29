@@ -3,16 +3,62 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Temperas - Mini Art Gallery</title>
+  <title>Temperas - Art Gallery</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="estilos.css">
 </head>
-<body style="background:#1e1f25; color:#f4f4f4;">
-  <div class="container py-5 text-center">
-    <h1 class="text-warning">Temperas</h1>
-    <p>Obras coloridas realizadas con temperas durante 2023.</p>
-    <img src="./img/temperas.jpeg" alt="Temperas" class="img-fluid rounded shadow my-4">
-    <a href="index.html" class="btn btn-secondary">⬅ Volver a la galería</a>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="index.html">Art Gallery</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="temperas.html">Temperas</a></li>
+        <li class="nav-item"><a class="nav-link" href="ceras.html">Ceras</a></li>
+        <li class="nav-item"><a class="nav-link" href="rotuladores.html">Rotuladores</a></li>
+        <li class="nav-item"><a class="nav-link" href="lapices.html">Lápices</a></li>
+        <li class="nav-item"><a class="nav-link" href="plastilina.html">Plastilina</a></li>
+        <li class="nav-item"><a class="nav-link" href="mix.html">MIX</a></li>
+        <li class="nav-item"><a class="nav-link" href="comprar.html">Comprar</a></li>
+      </ul>
+    </div>
   </div>
+</nav>
+
+<header class="banner" style="background-image: url('./img/temperas-banner.jpg')">
+  <h1>Temperas</h1>
+  <p>Colores vivos y brillantes para tus obras.</p>
+</header>
+
+<div class="container my-5">
+  <div class="row g-4">
+    <div class="col-md-4">
+      <div class="card gallery-card" style="background-image: url('./img/temperas1.jpeg')">
+        <div class="card-overlay">
+          <h5>Set 12 colores</h5>
+          <p>Precio: $12</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card gallery-card" style="background-image: url('./img/temperas2.jpeg')">
+        <div class="card-overlay">
+          <h5>Set 24 colores</h5>
+          <p>Precio: $20</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer class="bg-dark text-center py-3">
+  &copy; 2025 Art Gallery
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
