@@ -33,20 +33,21 @@ body {
   text-shadow: 0 0 3px rgba(0,0,0,0.5);
 }
 
-.navbar-light .navbar-nav .nav-link {
-  color: white; 
-  text-shadow: 0 0 2px rgba(0,0,0,0.5); 
-  transition: 0.3s;
-}
 .navbar a:hover {
   color: #ffd43b;              
   text-shadow: 0 0 5px #fff;   
 }
 
-.navbar-light .navbar-nav .nav-link:hover,
-.navbar-light .navbar-nav .nav-link.active {
-  color: white;
-  text-shadow: 0 0 4px rgba(0,0,0,0.7);
+.navbar-dark .navbar-nav .nav-link {
+  color: #fff; /* color inicial */
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.5); /* ligera sombra para contraste */
+}
+
+.navbar-dark .navbar-nav .nav-link:hover,
+.navbar-dark .navbar-nav .nav-link.active {
+  color: #ffd43b; /* color al pasar el ratón */
+  text-shadow: 1px 1px 5px #fff; /* efecto de iluminación al pasar */
 }
 
 /* =======================
@@ -59,9 +60,10 @@ body {
   text-align: center;
   padding: 50px 20px 20px; 
   margin-bottom: 40px;
+margin-top: 20px;
   border-bottom: 3px solid #ffd43b;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-   position: fixed;
+
 }
 
 .welcome-section h1 {
