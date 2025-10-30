@@ -57,9 +57,9 @@ body {
   background: #fff; 
   color: #222;
   text-align: center;
-  padding: 80px 20px 20px; 
+  padding: 50px 20px 20px; 
   margin-bottom: 40px;
-   margin-top: 10;
+   border-top: 4px;
   border-bottom: 3px solid #ffd43b;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
