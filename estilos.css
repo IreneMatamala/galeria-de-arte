@@ -24,7 +24,7 @@ h1, h2, h3 {
    BARRA DE NAVEGACIÓN
 ======================= */
 .navbar {
-  background: #fff; /* Fondo blanco */
+  background: #fff; 
   padding: 15px 20px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
   transition: all 0.3s ease;
@@ -48,7 +48,7 @@ h1, h2, h3 {
 
 .navbar-nav .nav-link:hover,
 .navbar-nav .nav-link.active {
-  color: #ffd43b; /* Amarillo brillante al pasar el mouse */
+  color: #ffd43b;
 }
 
 
@@ -56,10 +56,10 @@ h1, h2, h3 {
    SECCIÓN DE BIENVENIDA
 ======================= */
 .welcome-section {
-  background: #fff; /* Sin imagen */
+  background: #fff;
   color: #222;
   text-align: center;
-  padding: 50px 20px; /* Más compacto */
+  padding: 50px 20px 40px;;
   margin-bottom: 30px;
   border-bottom: 3px solid #ffd43b;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
