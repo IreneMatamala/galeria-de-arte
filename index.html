@@ -1,142 +1,114 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Mini Art Gallery</title>
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 
-  <!-- Bootstrap 5 -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-
-  <!-- Estilos personalizados -->
-  <link rel="stylesheet" href="estilos.css" />
+  <!-- Estilos -->
+  <link rel="stylesheet" href="estilos.css">
 </head>
-
 <body>
-  <!-- 🔹 Navegación principal -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm fixed-top">
+
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
     <div class="container">
-      <a class="navbar-brand fw-bold text-warning" href="index.html">🎨 Mini Gallery</a>
+      <a class="navbar-brand" href="index.html">🎨 Art Gallery</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div id="navbarNav" class="collapse navbar-collapse justify-content-end">
-        <ul class="navbar-nav">
-          <li class="nav-item"><a href="index.html" class="nav-link active">Inicio</a></li>
-          <li class="nav-item"><a href="temperas.html" class="nav-link">Témperas</a></li>
-          <li class="nav-item"><a href="ceras.html" class="nav-link">Ceras</a></li>
-          <li class="nav-item"><a href="rotuladores.html" class="nav-link">Rotuladores</a></li>
-          <li class="nav-item"><a href="colores.html" class="nav-link">Lápices</a></li>
-          <li class="nav-item"><a href="plastilina.html" class="nav-link">Plastilina</a></li>
-          <li class="nav-item"><a href="mix.html" class="nav-link">Mix</a></li>
-          <li class="nav-item"><a href="comprar.html" class="nav-link text-warning fw-bold">🛒 Comprar</a></li>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link active" href="index.html">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link" href="temperas.html">Témperas</a></li>
+          <li class="nav-item"><a class="nav-link" href="ceras.html">Ceras</a></li>
+          <li class="nav-item"><a class="nav-link" href="rotuladores.html">Rotuladores</a></li>
+          <li class="nav-item"><a class="nav-link" href="colores.html">Lápices</a></li>
+          <li class="nav-item"><a class="nav-link" href="plastilina.html">Plastilina</a></li>
+          <li class="nav-item"><a class="nav-link" href="mix.html">MIX</a></li>
         </ul>
       </div>
     </div>
   </nav>
 
-  <!-- 🔹 Encabezado -->
-<section class="welcome-section">
-  <h1>BIENVENIDO A LA ART GALLERY</h1>
-  <p>Explora una colección única de arte creada con pasión y creatividad.</p>
-  <button class="btn-buy">Comprar Pinturas</button>
-</section>
+  <!-- SECCIÓN DE BIENVENIDA -->
+  <section class="welcome-section">
+    <div class="container">
+      <h1>BIENVENIDO A LA ART GALLERY</h1>
+      <p>Explora una colección única de arte creada con pasión y creatividad. Cada pieza refleja la imaginación y el talento de nuestros pequeños artistas.</p>
+      <button class="btn-buy">Comprar Pinturas</button>
+    </div>
+  </section>
 
-
-  <!-- 🔹 Galería principal -->
-  <main class="container py-5">
-    <div class="gallery-grid">
-
-      <!-- Tarjeta 1 -->
-      <div class="card-wrap">
-        <a href="temperas.html" class="text-decoration-none">
-          <div class="gallery-card" style="background-image:url('./img/temperas.jpeg')">
-            <div class="card-overlay">
-              <h5>Témperas</h5>
-              <p>2023</p>
-            </div>
-          </div>
-        </a>
-      </div>
-
-      <!-- Tarjeta 2 -->
-      <div class="card-wrap">
-        <a href="ceras.html" class="text-decoration-none">
-          <div class="gallery-card" style="background-image:url('./img/ceras.webp')">
-            <div class="card-overlay">
-              <h5>Ceras</h5>
-              <p>2023</p>
-            </div>
-          </div>
-        </a>
-      </div>
-
-      <!-- Tarjeta 3 -->
-      <div class="card-wrap">
-        <a href="rotuladores.html" class="text-decoration-none">
-          <div class="gallery-card" style="background-image:url('./img/rotulador.jpeg')">
-            <div class="card-overlay">
-              <h5>Rotuladores</h5>
-              <p>2023</p>
-            </div>
-          </div>
-        </a>
-      </div>
-
-      <!-- Tarjeta 4 -->
-      <div class="card-wrap">
-        <a href="colores.html" class="text-decoration-none">
-          <div class="gallery-card" style="background-image:url('./img/colores.jpeg')">
-            <div class="card-overlay">
-              <h5>Lápices de Madera</h5>
-              <p>2023</p>
-            </div>
-          </div>
-        </a>
-      </div>
-
-      <!-- Tarjeta 5 -->
-      <div class="card-wrap">
-        <a href="plastilina.html" class="text-decoration-none">
-          <div class="gallery-card" style="background-image:url('./img/plastilina.jpeg')">
-            <div class="card-overlay">
-              <h5>Plastilina</h5>
-              <p>2023</p>
-            </div>
-          </div>
-        </a>
-      </div>
-
-      <!-- Tarjeta 6 -->
-      <div class="card-wrap">
-        <a href="mix.html" class="text-decoration-none">
-          <div class="gallery-card" style="background-image:url('./img/mix.jpg')">
-            <div class="card-overlay">
-              <h5>MIX</h5>
-              <p>2023</p>
-            </div>
-          </div>
-        </a>
-      </div>
-
+  <!-- GALERÍA PRINCIPAL -->
+  <div class="container gallery-grid">
+    <div class="card-wrap">
+      <a href="temperas.html" class="gallery-card" style="background-image: url('./img/temperas.jpeg')">
+        <div class="card-overlay">
+          <h5>Témperas</h5>
+          <p>2023</p>
+        </div>
+      </a>
     </div>
 
-    <!-- 🔹 Botón Comprar -->
-    <div class="text-center mt-5">
-      <a href="comprar.html" class="btn btn-buy">🛍️ Comprar Pinturas</a>
+    <div class="card-wrap">
+      <a href="ceras.html" class="gallery-card" style="background-image: url('./img/ceras.webp')">
+        <div class="card-overlay">
+          <h5>Ceras</h5>
+          <p>2023</p>
+        </div>
+      </a>
     </div>
-  </main>
 
-  <!-- 🔹 Footer -->
-  <footer class="bg-dark text-light text-center py-4 mt-5">
-    <p class="mb-0">© 2025 Mini Art Gallery | Creado con ❤️ por Jóvenes Artistas</p>
-  </footer>
+    <div class="card-wrap">
+      <a href="rotuladores.html" class="gallery-card" style="background-image: url('./img/rotulador.jpeg')">
+        <div class="card-overlay">
+          <h5>Rotuladores</h5>
+          <p>2023</p>
+        </div>
+      </a>
+    </div>
+
+    <div class="card-wrap">
+      <a href="colores.html" class="gallery-card" style="background-image: url('./img/colores.jpeg')">
+        <div class="card-overlay">
+          <h5>Lápices de Madera</h5>
+          <p>2023</p>
+        </div>
+      </a>
+    </div>
+
+    <div class="card-wrap">
+      <a href="plastilina.html" class="gallery-card" style="background-image: url('./img/plastilina.jpeg')">
+        <div class="card-overlay">
+          <h5>Plastilina</h5>
+          <p>2023</p>
+        </div>
+      </a>
+    </div>
+
+    <div class="card-wrap">
+      <a href="mix.html" class="gallery-card" style="background-image: url('./img/mix.jpg')">
+        <div class="card-overlay">
+          <h5>MIX</h5>
+          <p>2023</p>
+        </div>
+      </a>
+    </div>
+  </div>
+
+
 
   <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
 
 
   <footer>
