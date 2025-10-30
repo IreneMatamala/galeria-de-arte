@@ -112,40 +112,43 @@ body {
 
 .gallery-card {
   border-radius: 15px;
-  height: 350px;             
+  height: 250px;
   background-size: cover;
   background-position: center;
   position: relative;
-  box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
   transform-style: preserve-3d;
   transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
 
 .gallery-card:hover {
-  transform: rotateY(8deg) scale(1.05);
-  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.35);
+  transform: rotateY(10deg) scale(1.05);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.4);
 }
 
-/* Overlay ligero para texto legible */
-
 .card-overlay {
-  background: linear-gradient(to top, rgba(0,0,0,0.1), transparent);
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 15px;
+  height: 100%;
   color: #fff;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  padding: 15px 20px;
-  border-radius: 15px;
-  text-shadow: 1px 1px 2px black;
+  padding: 20px;
+  transition: background 0.3s;
+}
+
+.gallery-card:hover .card-overlay {
+  background: rgba(0, 0, 0, 0.7);
 }
 
 .card-overlay h5 {
-  font-size: 1.4rem;
+  font-size: 1.3rem;
   margin-bottom: 5px;
 }
 
 .card-overlay p {
-  font-size: 1rem;
+  font-size: 0.9rem;
   color: #ffd43b;
 }
 
