@@ -42,14 +42,13 @@ h1, h2, h3 {
    SECCIÓN DE BIENVENIDA
 ======================= */
 .welcome-section {
-  background: #fff; /* Eliminada imagen de fondo */
-  color: #222;
+  padding: 60px 20px;  /* menos alto */
+  margin-bottom: 20px; /* menos separación */
   text-align: center;
-  padding: 100px 20px;
-  margin-bottom: 40px;
   border-bottom: 3px solid #ffd43b;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
 }
+
 
 .welcome-section h1 {
   font-size: 2.8rem;
@@ -114,7 +113,7 @@ h1, h2, h3 {
 }
 
 .card-overlay {
-  background: rgba(0, 0, 0, 0.1);
+  background: none;
   border-radius: 15px;
   height: 100%;
   color: #fff;
