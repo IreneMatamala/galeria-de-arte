@@ -59,8 +59,9 @@ h1, h2, h3 {
   background: #fff;
   color: #222;
   text-align: center;
-  padding: 50px 20px 40px;;
+  padding: 50px 20px;
   margin-bottom: 30px;
+  margin-top: 20px;
   border-bottom: 3px solid #ffd43b;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
