@@ -30,16 +30,20 @@ body {
 
 .navbar-brand {
   letter-spacing: 1px;
+  color: #fff;
+  text-shadow: 0 0 3px rgba(255,255,255,0.7);
 }
 
 .navbar-dark .navbar-nav .nav-link {
-  color: #ddd;
+  color: #fff;
+  text-shadow: 0 0 2px rgba(255,255,255,0.6); /* sombra para resaltar */
   transition: 0.3s;
 }
 
 .navbar-dark .navbar-nav .nav-link:hover,
 .navbar-dark .navbar-nav .nav-link.active {
   color: #ffd43b;
+  text-shadow: 0 0 4px rgba(255,255,255,0.9);
 }
 
 /* =======================
@@ -49,7 +53,7 @@ body {
   background: #fff; /* fondo blanco para el texto */
   color: #222;
   text-align: center;
-  padding: 180px 20px 60px; /* espacio superior para navbar */
+  padding: 220px 20px 60px; /* margen superior aumentado para navbar */
   margin-bottom: 40px;
   border-bottom: 3px solid #ffd43b;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
