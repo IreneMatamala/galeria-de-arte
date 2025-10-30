@@ -18,49 +18,48 @@ body {
    BARRA DE NAVEGACIÓN
 ======================= */
 .navbar {
-  background-color: #212529; /* negro profesional */
+  background-color: #212529;
   padding: 15px 30px;
   box-shadow: 0 2px 6px rgba(0,0,0,0.3);
-  position: fixed; /* fija en la parte superior */
+  position: fixed;
   width: 100%;
   top: 0;
   z-index: 1000;
-  transition: all 0.3s ease;
 }
 
 .navbar-brand {
   letter-spacing: 1px;
   color: #fff;
-  text-shadow: 0 0 3px rgba(255,255,255,0.7);
+  text-shadow: 0 0 3px rgba(0,0,0,0.5);
 }
 
 .navbar-dark .navbar-nav .nav-link {
-  color: #fff;
-  text-shadow: 0 0 2px rgba(255,255,255,0.6); /* sombra para resaltar */
+  color: #fff; 
+  text-shadow: 0 0 2px rgba(0,0,0,0.5); 
   transition: 0.3s;
 }
 
 .navbar-dark .navbar-nav .nav-link:hover,
 .navbar-dark .navbar-nav .nav-link.active {
   color: #ffd43b;
-  text-shadow: 0 0 4px rgba(255,255,255,0.9);
+  text-shadow: 0 0 4px rgba(0,0,0,0.7);
 }
 
 /* =======================
    SECCIÓN DE BIENVENIDA
 ======================= */
 .welcome-section {
-  background: #fff; /* fondo blanco para el texto */
+  background: #fff; 
   color: #222;
   text-align: center;
-  padding: 220px 20px 60px; /* margen superior aumentado para navbar */
+  padding: 180px 20px 60px; /* separa del navbar */
   margin-bottom: 40px;
   border-bottom: 3px solid #ffd43b;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
 .welcome-section h1 {
-  font-size: 2.8rem;
+  font-size: 2.5rem;
   margin-bottom: 20px;
   letter-spacing: 1px;
 }
@@ -111,25 +110,26 @@ body {
   background-size: cover;
   background-position: center;
   position: relative;
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
   transform-style: preserve-3d;
   transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
 
 .gallery-card:hover {
-  transform: rotateY(10deg) scale(1.05);
-  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.4);
+  transform: rotateY(8deg) scale(1.05);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.35);
 }
 
+/* Overlay ligero para texto legible */
 .card-overlay {
-  background: linear-gradient(to top, rgba(0,0,0,0.6), rgba(0,0,0,0.2));
+  background: rgba(0,0,0,0.35);
   color: #fff;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
   padding: 15px 20px;
-  text-shadow: 1px 1px 2px black;
   border-radius: 15px;
+  text-shadow: 1px 1px 2px black;
 }
 
 .card-overlay h5 {
@@ -175,13 +175,13 @@ body {
   background-position: center;
   border-radius: 15px;
   height: 250px;
-  box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.25);
   transition: all 0.3s ease;
 }
 
 .art-card:hover {
   transform: translateY(-8px) scale(1.03);
-  box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.35);
 }
 
 /* Botón volver */
