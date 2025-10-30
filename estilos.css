@@ -127,7 +127,7 @@ body {
 }
 
 .card-overlay {
-  background: rgba(0, 0, 0, 0.5);
+  background: none;
   border-radius: 15px;
   height: 100%;
   color: #fff;
