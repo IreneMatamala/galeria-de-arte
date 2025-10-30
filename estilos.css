@@ -33,14 +33,14 @@ body {
   text-shadow: 0 0 3px rgba(0,0,0,0.5);
 }
 
-.navbar-dark .navbar-nav .nav-link {
+.navbar-light .navbar-nav .nav-link {
   color: #fff; 
   text-shadow: 0 0 2px rgba(0,0,0,0.5); 
   transition: 0.3s;
 }
 
-.navbar-dark .navbar-nav .nav-link:hover,
-.navbar-dark .navbar-nav .nav-link.active {
+.navbar-light .navbar-nav .nav-link:hover,
+.navbar-light .navbar-nav .nav-link.active {
   color: #ffd43b;
   text-shadow: 0 0 4px rgba(0,0,0,0.7);
 }
@@ -52,7 +52,7 @@ body {
   background: #fff; 
   color: #222;
   text-align: center;
-  padding: 180px 20px 60px; /* separa del navbar */
+  padding: 70px 20px 30px; 
   margin-bottom: 40px;
   border-bottom: 3px solid #ffd43b;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
@@ -61,6 +61,7 @@ body {
 .welcome-section h1 {
   font-size: 2.5rem;
   margin-bottom: 20px;
+   margin-top: 20px;
   letter-spacing: 1px;
 }
 
