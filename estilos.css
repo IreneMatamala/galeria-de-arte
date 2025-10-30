@@ -1,143 +1,161 @@
 
-/* ESTILOS GENERALES DEL SITIO  */
-
-
-body {
-    font-family: 'Lora', serif;
-    background: #1e1f25; /* fondo oscuro profesional */
-    color: #f4f4f4;
-    margin: 0;
-    padding: 0;
+/* Contenedor de la galería: fuerza 3 columnas en escritorio */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 30px 16px;
+  perspective: 1200px; /* importante para efecto 3D */
 }
 
-h1, h5, p {
-    margin: 0;
+/*envoltorio de tarjeta 
+.card-wrap {
+  perspective: 900px;
+}
+
+/* La tarjeta */
+.gallery-card {
+  position: relative;
+  border-radius: 14px;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+  height: 0;
+  padding-bottom: 75%;      
+  transform-style: preserve-3d;
+  transition: transform 420ms cubic-bezier(.2,.8,.2,1), box-shadow 420ms ease;
+  will-change: transform;
+  box-shadow:
+    0 6px 18px rgba(0,0,0,0.45),     
+    inset 0 -30px 60px rgba(0,0,0,0.12);
+  background-color: #222;
+  display: flex;
+  align-items: end;
 }
 
 
-/* GALERÍA EN LA PÁGINA PRINCIPAL */
+.card-overlay {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 14px 12px;
+  background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.55) 60%, rgba(0,0,0,0.7) 100%);
+  color: #fff;
+  z-index: 2;
+  backdrop-filter: blur(2px);
+}
+
+/* título dentro */
+.card-overlay h5 {
+  margin: 0;
+  color: #ffde91;
+  font-weight: 600;
+  text-shadow: 0 2px 6px rgba(0,0,0,0.6);
+}
+
+/* fecha/desc */
+.card-overlay p {
+  margin: 4px 0 0;
+  font-size: 0.9rem;
+  color: #e5e2d9;
+}
+
+/* efecto 3D */
+.card-wrap:hover .gallery-card,
+.card-wrap:focus-within .gallery-card {
+  transform: translateY(-14px) rotateX(6deg) rotateZ(-1deg) scale(1.03);
+  box-shadow:
+    0 20px 40px rgba(0,0,0,0.55),
+    0 6px 18px rgba(0,0,0,0.35);
+  z-index: 5;
+}
+
+/* pequeño tilt dinámico */
+.gallery-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(135deg, rgba(255,255,255,0.02), rgba(0,0,0,0.12));
+  mix-blend-mode: overlay;
+  transition: opacity 300ms ease;
+  opacity: 0.9;
+}
+
+.card-wrap:hover .gallery-card::after {
+  opacity: 0.6;
+}
+
+/* bordes sutiles */
+.gallery-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 14px;
+  box-shadow: 0 1px 0 rgba(255,255,255,0.02) inset;
+  pointer-events: none;
+}
+
+/* APARICIÓN ESCALONADA */
+.gallery-grid .card-wrap {
+  opacity: 0;
+  transform: translateY(18px);
+  animation: fadeUp 600ms ease forwards;
+}
+
+/* delay  */
+.gallery-grid .card-wrap:nth-child(1) { animation-delay: 0ms; }
+.gallery-grid .card-wrap:nth-child(2) { animation-delay: 80ms; }
+.gallery-grid .card-wrap:nth-child(3) { animation-delay: 160ms; }
+.gallery-grid .card-wrap:nth-child(4) { animation-delay: 240ms; }
+.gallery-grid .card-wrap:nth-child(5) { animation-delay: 320ms; }
+.gallery-grid .card-wrap:nth-child(6) { animation-delay: 400ms; }
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* RESPONSIVE */
+@media (max-width: 992px) {
+  .gallery-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 576px) {
+  .gallery-grid { grid-template-columns: 1fr; padding: 16px; }
+  .gallery-card { padding-bottom: 65%; } /* algo más alto en móvil */
+}
 
 
 .gallery-card {
-    border-radius: 15px;
-    height: 250px;
-    position: relative;
-    background-size: cover;
-    background-position: center;
-    overflow: hidden;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    cursor: pointer;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
 }
 
-.gallery-card:hover {
-    transform: scale(1.05);
-    box-shadow: 0 10px 25px rgba(0,0,0,0.5);
-}
-
-.card-overlay {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    background: rgba(0,0,0,0.6);
-    text-align: center;
-    padding: 15px;
-    color: #fff;
-}
-
-.card-overlay h5 {
-    font-size: 1.2rem;
-    font-weight: bold;
-}
-
-.card-overlay p {
-    font-size: 0.9rem;
-}
-
-
-/* HERO Y BANNERS */
-
-
-header, .banner {
-    text-align: center;
-    padding: 50px 20px;
-    background-size: cover;
-    background-position: center;
-    border-radius: 10px;
-}
-
-header {
-    background: linear-gradient(to bottom right, #222430, #3e3f4f);
-    color: #FFD600;
-}
-
-.banner h1 {
-    text-shadow: 1px 1px 2px black, 0 0 1em #fff, 0 0 0.5em #fff;
-}
-
-.banner ul {
-    list-style: none;
-    padding: 0;
-}
-
-.banner ul li {
-    margin: 10px 0;
-    font-weight: bold;
-}
-
-
-/* BOTONES */
-
-
+/* (texto, boton etc.) */
 .btn-buy {
-    background: linear-gradient(45deg, #ffde91, #ffbb33);
-    color: #1e1f25;
-    font-weight: bold;
-    transition: background 0.3s ease, transform 0.2s ease;
+  background: linear-gradient(45deg, #ffde91, #ffbb33);
+  color: #1e1f25;
+  font-weight: 700;
+  border-radius: 28px;
+  padding: 10px 18px;
+  box-shadow: 0 8px 20px rgba(255,180,60,0.08);
+  transition: transform .25s ease, box-shadow .25s ease;
 }
-
 .btn-buy:hover {
-    background: linear-gradient(45deg, #ffbb33, #ffaa00);
-    transform: scale(1.05);
-}
-
-/* Botón general de bootstrap override */
-.btn {
-    border-radius: 50px;
+  transform: translateY(-4px);
+  box-shadow: 0 16px 40px rgba(255,170,40,0.14);
 }
 
 
-/* TARJETAS DE TIENDA */
-
-
-.card {
-    background-color: #2b2d38;
-    border-radius: 12px;
-    color: #fff;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+.navbar-nav .nav-link.active,
+.navbar-nav .nav-link:hover {
+  color: #ffde91 !important;
 }
-
-.card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 20px rgba(0,0,0,0.5);
-}
-
-.card img {
-    border-radius: 12px;
-}
-
-
-/* RESPONSIVE GRID */
-
-
-.container {
-    max-width: 1200px;
-    margin: auto;
-    padding: 20px;
-}
-
-.row.g-4 {
-    gap: 1.5rem;
-}
-
-
-/* FOOTER*/
