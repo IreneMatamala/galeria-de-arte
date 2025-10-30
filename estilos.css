@@ -20,24 +20,37 @@ h1, h2, h3 {
   font-weight: 700;
 }
 
-/* Navegación */
+/* =======================
+   BARRA DE NAVEGACIÓN
+======================= */
 .navbar {
+  background: #fff; /* Fondo blanco */
+  padding: 15px 20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
   transition: all 0.3s ease;
 }
 
 .navbar-brand {
+  color: #222;
+  font-weight: 700;
   letter-spacing: 1px;
+  font-size: 1.5rem;
+  text-decoration: none;
 }
 
-.navbar-dark .navbar-nav .nav-link {
-  color: #333;
+.navbar-nav .nav-link {
+  color: #555;
+  margin-left: 20px;
+  font-weight: 500;
   transition: 0.3s;
+  text-decoration: none;
 }
 
-.navbar-dark .navbar-nav .nav-link:hover,
-.navbar-dark .navbar-nav .nav-link.active {
-  color: #ffd43b;
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+  color: #ffd43b; /* Amarillo brillante al pasar el mouse */
 }
+
 
 /* =======================
    SECCIÓN DE BIENVENIDA
@@ -138,67 +151,6 @@ h1, h2, h3 {
   color: #ffd43b;
 }
 
-/* =======================
-   PÁGINAS SECUNDARIAS
-======================= */
-.page-header {
-  background: #fff;
-  color: #222;
-  text-align: center;
-  padding: 50px 20px 30px;
-  margin-bottom: 30px;
-  border-bottom: 3px solid #ffd43b;
-}
-
-.page-header h1 {
-  font-size: 2.2rem;
-  color: #222;
-}
-
-.page-header p {
-  color: #555;
-}
-
-/* Grid de 9 imágenes */
-.art-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 25px;
-  padding: 0 20px 60px;
-}
-
-.art-card {
-  background-size: cover;
-  background-position: center;
-  border-radius: 15px;
-  height: 300px;
-  box-shadow: 0 6px 15px rgba(0,0,0,0.3);
-  transition: all 0.3s ease;
-}
-
-.art-card:hover {
-  transform: translateY(-8px) scale(1.03);
-  box-shadow: 0 10px 25px rgba(0,0,0,0.4);
-}
-
-/* Botón volver */
-.btn-back {
-  display: inline-block;
-  background: #343a40;
-  color: #fff;
-  text-decoration: none;
-  padding: 10px 25px;
-  border-radius: 50px;
-  transition: all 0.3s ease;
-}
-
-.btn-back:hover {
-  background: #ffd43b;
-  color: #222;
-  transform: scale(1.05);
-}
-
-/* Footer */
 footer {
   background: #212529;
   color: #ccc;
