@@ -34,7 +34,7 @@ body {
 }
 
 .navbar a:hover {
-  color: #ffd43b;              
+  color: #ffd43b !important;              
   text-shadow: 0 0 5px #fff;   
 }
 
