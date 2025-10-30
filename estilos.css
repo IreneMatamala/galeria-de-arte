@@ -39,15 +39,15 @@ body {
 }
 
 .navbar-dark .navbar-nav .nav-link {
-  color: #fff; /* color inicial */
+  color: white;
   transition: color 0.3s ease, text-shadow 0.3s ease;
   text-shadow: 1px 1px 2px rgba(0,0,0,0.5); /* ligera sombra para contraste */
 }
 
 .navbar-dark .navbar-nav .nav-link:hover,
 .navbar-dark .navbar-nav .nav-link.active {
-  color: #ffd43b; /* color al pasar el ratón */
-  text-shadow: 1px 1px 5px #fff; /* efecto de iluminación al pasar */
+  color: #ffd43b; 
+  text-shadow: 1px 1px 5px #fff;
 }
 
 /* =======================
