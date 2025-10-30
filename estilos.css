@@ -100,9 +100,9 @@ body {
 ======================= */
 .gallery-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 25px;
-  margin-top: 60px;
+  margin-top: 40px;
   padding: 0 20px 60px;
 }
 
@@ -112,34 +112,31 @@ body {
 
 .gallery-card {
   border-radius: 15px;
-  height: 250px;
+  height: 350px;
   background-size: cover;
   background-position: center;
   position: relative;
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
   transform-style: preserve-3d;
   transition: transform 0.4s ease, box-shadow 0.4s ease;
+  display: block;
 }
 
 .gallery-card:hover {
-  transform: rotateY(10deg) scale(1.05);
-  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.4);
+  transform: rotateY(8deg) scale(1.05);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.35);
 }
 
+/* Overlay para texto legible */
 .card-overlay {
   background: none;
-  border-radius: 15px;
-  height: 100%;
   color: #fff;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  padding: 20px;
-  transition: background 0.3s;
-}
-
-.gallery-card:hover .card-overlay {
-  background: rgba(0, 0, 0, 0.7);
+  padding: 15px 20px;
+  border-radius: 15px;
+  text-shadow: 1px 1px 2px black;
 }
 
 .card-overlay h5 {
@@ -151,7 +148,6 @@ body {
   font-size: 0.9rem;
   color: #ffd43b;
 }
-
 /* =======================
    FOOTER
 ======================= */
