@@ -60,7 +60,6 @@ body {
   text-align: center;
   padding: 50px 20px 20px; 
   margin-bottom: 40px;
-margin-top: 20px;
   border-bottom: 3px solid #ffd43b;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 
@@ -81,23 +80,6 @@ margin-top: 20px;
    text-align: center;
 }
 
-.btn-buy {
-  background: linear-gradient(45deg, #ffd43b, #f0a500);
-  color: #222;
-  font-weight: 700;
-  border: none;
-  border-radius: 50px;
-  padding: 15px 40px;
-  transition: all 0.3s ease;
-  text-transform: uppercase;
-  cursor: pointer;
-}
-
-.btn-buy:hover {
-  transform: scale(1.05);
-  background: linear-gradient(45deg, #f0a500, #ffd43b);
-  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-}
 
 
 /* =======================
